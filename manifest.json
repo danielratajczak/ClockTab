@@ -1,0 +1,10 @@
+{
+   "author": "Daniel Ratajczak",
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "description": "Zegar dla zakładki nowej karty.",
+   "manifest_version": 2,
+   "name": "ClockTab",
+   "version": "0.1"
+}
