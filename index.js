@@ -1,22 +1,19 @@
-function GetClock() {
-  var d = new Date();
-  var nmonth = (d.getMonth() + 1),
-  ndate = d.getDate(),
-  nyear = d.getFullYear();
-  if (nmonth <= 9) nmonth = "0" + nmonth;
-  if (ndate <= 9) ndate = "0" + ndate;
-  var nhour = d.getHours(),
-    nmin = d.getMinutes(),
-    nsec = d.getSeconds();
-  if (nmin <= 9) nmin = "0" + nmin;
-  if (nsec <= 9) nsec = "0" + nsec;
+GetClock = () => {
+  let d = new Date();
+  let month = (d.getMonth() + 1), date = d.getDate(), year = d.getFullYear();
+  let hour = d.getHours(), min = d.getMinutes(), sec = d.getSeconds();
 
-  var clocktext = nhour + ":" + nmin + ":" + nsec + "";
-  document.getElementById('clockbox').innerHTML = clocktext;  
+  if (month <= 9) month = "0" + month;
+  if (date <= 9) date = "0" + date;
+  if (min <= 9) min = "0" + min;
+  if (sec <= 9) sec = "0" + sec;
+
+  let clocktext = hour + ":" + min + ":" + sec + "";
+  document.getElementById('clockbox').innerHTML = clocktext;
 }
 
 
-window.onload = function () {
+window.onload = () => {
   GetClock();
   setInterval(GetClock, 1000);
 }
