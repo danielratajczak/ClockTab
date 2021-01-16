@@ -1,0 +1,58 @@
+$background-black: #000;
+$background-white: #fff;
+$text-white: #fff;
+
+body {
+    width: 100%;
+    display: table-cell;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $background-black;
+    margin: 0;
+    padding: 0;
+    color: $text-white;
+    font-size: 12px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+#clockbox {
+    font-size: 20vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -1px;
+    -moz-animation: animate 3s;
+    /* Firefox */
+    -webkit-animation: animate 3s;
+    /* Safari and Chrome */
+    -o-animation: animate 3s;
+    /* Opera */
+    animation: animate 1.5s linear infinite;
+    font-family: 'Helvetica', sans-serif;
+    color: $text-white;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+
+}
+
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
